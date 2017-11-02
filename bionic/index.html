@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="icon" type="image/ico" href="img/vilcum_ico.ico"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>VILCUM</title>
+    <meta name ="author" content ="Norfi Carrodeguas">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sb-admin-2.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+</head>
+<body >
+
+<div class="container_polar">
+    	<div class="row">
+        	<div id="contenedor_datos_polar" class="col-md-12 polar_text">
+            	<h1>Datos Actuales</h1>
+            <div id="graficos_polar" class="col-xs-12">
+                <div id="canvas-holder">
+                    <div class="col-md-6 col-xs-12 graficos_polar ">
+                    		<canvas id="myChart_polar" ></canvas>
+	            	</div>                  
+            	</div>
+        	</div>
+        	</div>
+        	<div class="col-md-6 col-xs-6 ">
+					<div class="caja_temperatura" >
+						<div class="caja_hija">
+							Lluvia: <span id="dato_lluvia_actual" ></span>
+						</div>
+		</div>
+   		</div>
+</div>
+
+	<div class="container_luz">
+    	<div class="row">
+			
+        	<div id="contenedor_datos_luz" class="col-md-12">
+            	<h1>Datos de Luz</h1><div id="boton" class="ocultar"></div>
+            <div id="contenedor_oculto">
+				<div class="col-md-6 col-xs-6 ">
+					<div class="caja_luz">
+						<div class="caja_hija  " >
+							Luz: <span id="luz_actual_dato" ></span>
+						</div>
+					</div>
+				</div>
+				<div class="separador separador30px"></div>
+				<div id="graficos_luz" class="col-xs-12 graficos_luz">
+					<div id="canvas-holder">
+						<div class="col-md-6 col-xs-12 graficos">
+							<canvas id="myChart_luz" ></canvas>
+						</div>
+						<div class="col-md-6 col-xs-12 graficos_acumulado">
+							<canvas id="myChart_luz_anteriores" ></canvas>
+							</div>
+					</div>
+				</div>
+        	</div>
+        	</div>
+   		</div>
+	</div>
+		<div class="container_temperatura">
+    	<div class="row">
+        	<div id="contenedor_datos_temperatura" class="col-md-12">
+            	<h1>Datos de Ambiente</h1><div id="boton1" class="ocultar"></div>
+            <div id="contenedor_oculto1">
+				<div class="col-md-6 col-xs-6 ">
+					<div class="caja_temperatura" >
+						<div class="caja_hija">
+							Temperatura: <span id="temperatura_actual_dato" ></span>
+						</div>
+					</div>
+					<div class="caja_humedad" >
+						<div  class="caja_hija ">
+							Humedad: 	  <span id="humedad_actual_dato" ></span>
+						</div>
+					</div>
+				</div>
+				<div class="separador separador30px"></div>
+				<div id="graficos_temperatura" class="col-xs-12 graficos_temperatura">
+					<div id="canvas-holder">
+						<div class="col-md-6 col-xs-12 graficos">
+							<canvas id="myChart_temperatura" ></canvas>
+						</div>
+						<div class="col-md-6 col-xs-12 graficos_acumulado">
+							<canvas id="myChart_temperatura_anteriores" ></canvas>
+						</div>
+					</div>
+				</div>
+        	</div>
+        	</div>
+   		</div>
+	</div>
+	<script type="text/javascript" src="js/codigo.js"></script>
+</body>
+</html>
